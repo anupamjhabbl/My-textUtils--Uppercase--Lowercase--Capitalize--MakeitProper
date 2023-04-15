@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+#exampleFormControlTextarea1{
+  width:700px;
+  margin:auto;
+  height:300px;
+}
+
+#mytext{
+  margin:auto;
+  margin-top:60px;
+  width:700px;
+  font-size: larger;
+}
+
+button[type="button"]{
+  margin:5px;
 }
