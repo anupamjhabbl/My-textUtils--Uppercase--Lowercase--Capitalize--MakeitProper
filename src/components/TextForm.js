@@ -9,6 +9,19 @@ function TextForm(props){
         props.alertfunc("converted to uppercse","success");
     }
 
+    let makeItProper = () => {
+        let count = 0;
+        for (let i=0;i<text.length;i++){
+            if (text[i]===' ' && i+1<text.length && (text[i+1]===',' || text[i+1]==='.' || text[i+1]==='!')){
+                count++;
+                if (i+2<text.length && text[i+2]!==' '){
+                    count--;
+                }
+            }
+        }
+        return count;
+    }
+
     function change(event){
         setText(event.target.value);
     }
@@ -19,14 +32,22 @@ function TextForm(props){
     }
 
     function wordCount(){
+        // removing extra spaces
+        if (text===''){
+            return 0;
+        }
         let k = text;
         let regEx = /\s+/g
         k = k.replace(regEx,' ');
+
+        // make it proper
+        let count = makeItProper();
+
         let arr = k.split(' ');
         if (text[text.length-1]===' '){
-            return arr.length-1;
+            return arr.length-1-count;
         }
-        return arr.length;
+        return arr.length-count;
     }
 
     function convertLower(){
@@ -39,10 +60,12 @@ function TextForm(props){
         let regEx = /\s+/g
         k = k.replace(regEx,' '); 
         setText(k);
-        props.alertfunc("Removed Extra Space","success");
+        // props.alertfunc("Removed Extra Space","success");
+        console.log("Hello");
     }
 
     function capitalize(){
+        makeItProper(1);
         let k = text.toLowerCase();
         k = k[0].toUpperCase()+k.substring(1);
         let i = 0;
