@@ -13,7 +13,7 @@ function About(props){
     let toggleStyle = () => {
         let k;
         let newtext;
-        if (style.color=='white'){
+        if (style.color==='white'){
             k = {
                 color:'black',
                 backgroundColor:'white'
