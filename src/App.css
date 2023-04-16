@@ -38,7 +38,7 @@
 } */
 
 #exampleFormControlTextarea1{
-  width:700px;
+  width:800px;
   margin:auto;
   height:300px;
 }
@@ -46,10 +46,28 @@
 #mytext{
   margin:auto;
   margin-top:60px;
-  width:700px;
+  width:800px;
   font-size: larger;
 }
 
 button[type="button"]{
-  margin:5px;
+  margin:9px;
+}
+
+#container{
+  width:700px;
+  margin:auto;
+  margin-top:20px;
+}
+
+#about{
+  width:700px;
+  margin:auto;
+  margin-top:100px;
+}
+
+#darkMode{
+  width:190px;
+  margin:auto;
+  margin-top:30px;
 }

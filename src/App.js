@@ -1,6 +1,8 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
+import About from './components/About'
+import {useState} from 'react'
 
 
 // conditionally deciding the value of title
@@ -16,10 +18,12 @@ else{
 
 // main app component
 function App() {
+
   return (
     <div className="App">
       <Navbar title={t} about="anupam"/>
       <TextForm heading="write your text here"/>
+      {/* <About/> */}
     </div>
   );
 }
