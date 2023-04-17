@@ -64,16 +64,19 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <Navbar title={t} about="About" mode={mode} changeMode={toggleMode}/>
         <Alert alert={alert}/>
         <div>
           <Routes>
-            <Route exact path="/" element={<TextForm heading="write your text here" mode={mode} alertfunc={setAlertFunc}/>}/>
+            <Route exact path="/" element={<TextForm heading="write your text here" mode={mode} alertfunc={setAlertFunc}/><TextForm heading="write your text here" mode={mode} alertfunc={setAlertFunc}/>}/>
             <Route exact path="/about" element={<About mode={mode}/>}/>
           </Routes>
         </div>
-      </Router>
+      </Router> */}
+      <Navbar title={t} about="About" mode={mode} changeMode={toggleMode}/>
+      <Alert alert={alert}/>
+      <TextForm heading="write your text here" mode={mode} alertfunc={setAlertFunc}/>
     </div>
   );
 }

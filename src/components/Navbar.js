@@ -17,10 +17,10 @@ function Navbar(props){
             <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} navbar`} >
                 <div className="navbar_main_div">
                     <div className="navbar_insider_div" id="navbarSupportedContent">    
-                        <Link className="navbar-brand" to="/">{props.title}</Link>
+                        <a className="navbar-brand" href="/">{props.title}</a>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/about">{props.about}</Link>
+                            <a className="nav-link active" aria-current="page" href="#">{props.about}</a>
                             </li>
                         </ul>
                     </div>
