@@ -2,7 +2,15 @@ import React, {useState} from 'react'
 
 function TextForm(props){
     const [text, setText] = useState("");
-    // setText("My text");
+
+    let setEnable = () => {
+        if (text.length>0){
+            return "";
+        }
+        else{
+            return "disabled";
+        }
+    }
 
     let convertUpper = () => {
         setText(text.toUpperCase());
@@ -126,18 +134,45 @@ function TextForm(props){
         return style;
     }
 
+    let makeItProperActualFunc = () => {
+        let k = text;
+
+        // for .
+        let arr = k.split('.');
+        let t = "";
+        for (let i=0;i<arr.length;i++){
+            t = t + arr[i].trim() + ". ";
+        }
+
+        arr = t.split(',');
+        t = "";
+        for (let i=0;i<arr.length;i++){
+            t = t+ arr[i].trim() + ", ";
+        }
+
+        arr = t.split('!');
+        t = "";
+        for (let i=0;i<arr.length;i++){
+            t = t + arr[i].trim() + "! ";
+        }
+        t = t.substring(0,t.length-4);
+        setText(t);
+        capitalize();
+    }
+
     return (
         <div id="textform" style={colorfunc()}>
-            <div className="mb-3" id="mytext">
+            <div className="" id="mytext">
                 <label htmlFor="exampleFormControlTextarea1" className="form-label">{props.heading}</label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="10" value={text} onChange={change}></textarea>
                 <div id="button">
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={convertUpper}>UpperCase</button>
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={convertLower}>LowerCase</button>
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={capitalize}>capitalize</button>
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={clearText}>clearText</button>
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={copyText}>copyText</button>
-                    <button type="button" className="btn btn-primary" id="uppercase" onClick={removeExtraSpace}>removeExtraSpace</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={convertUpper}>UpperCase</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={convertLower}>LowerCase</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={capitalize}>capitalize</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={clearText}>clearText</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={copyText}>copyText</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={removeExtraSpace}>removeExtraSpace</button>
+                    <button type="button" className={`btn btn-primary ${setEnable()}`} id="uppercase" onClick={makeItProperActualFunc}>Make it proper</button>
                 </div>
             </div>
 

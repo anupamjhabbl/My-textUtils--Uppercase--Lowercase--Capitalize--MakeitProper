@@ -24,6 +24,10 @@ else{
 
 
 // main app component
+let settimeout_value = setTimeout(()=>{
+
+},1);
+
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
@@ -43,12 +47,13 @@ function App() {
   }
 
   function removeAlert(){
-    setTimeout(()=>{
+    settimeout_value = setTimeout(()=>{
       setAlert(null);
     },2000)
   }
 
   function setAlertFunc(message, type){
+    clearTimeout(settimeout_value);
     setAlert({
       message:message,
       type:type
@@ -65,7 +70,7 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<TextForm heading="write your text here" mode={mode} alertfunc={setAlertFunc}/>}/>
-            <Route exact path="/about" element={<About/>}/>
+            <Route exact path="/about" element={<About mode={mode}/>}/>
           </Routes>
         </div>
       </Router>
