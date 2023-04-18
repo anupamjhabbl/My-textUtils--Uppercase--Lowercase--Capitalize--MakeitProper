@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/css/main.654923e2.css",
+    "main.js": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/js/main.41fc41cc.js",
+    "static/js/787.28cb0dcd.chunk.js": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/index.html",
+    "main.654923e2.css.map": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/css/main.654923e2.css.map",
+    "main.41fc41cc.js.map": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/js/main.41fc41cc.js.map",
+    "787.28cb0dcd.chunk.js.map": "/My-textUtils--Uppercase--Lowercase--Capitalize--MakeitProper/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.654923e2.css",
+    "static/js/main.41fc41cc.js"
+  ]
+}
