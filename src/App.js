@@ -2,14 +2,14 @@ import './App.css'
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import Alert from './components/Alert'
-import About from './components/About'
+// import About from './components/About'
 import {useState} from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  // Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   // Link
+// } from 'react-router-dom';
 
 
 // conditionally deciding the value of title
